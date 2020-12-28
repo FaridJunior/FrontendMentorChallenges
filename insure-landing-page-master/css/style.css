@@ -104,7 +104,7 @@ body > header .bg-battern-intro-left {
 
 @media screen and (max-width: 800px) {
   body > header {
-    background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat left top 450px, url(../images/bg-pattern-intro-right-mobile.svg) no-repeat right bottom -150px, var(--dark-violet);
+    background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat left top 440px, url(../images/bg-pattern-intro-right-mobile.svg) no-repeat right bottom -150px, var(--dark-violet);
   }
   body > header .bg-battern-intro-right,
   body > header .bg-battern-intro-left {
@@ -228,7 +228,7 @@ body > footer {
     background: url(../images/bg-pattern-mobile-nav.svg) no-repeat bottom, var(--very-dark-violet);
     -webkit-transition: all 400ms ease-in-out;
     transition: all 400ms ease-in-out;
-    height: 70vh;
+    height: 90vh;
   }
   .nav .menu-btn.opened ~ .nav__links .nav__link:hover {
     color: var(--very-light-gray);
@@ -294,7 +294,7 @@ body > footer {
 
 .main-header .header-img-container {
   max-height: 550px;
-  padding-top: 5rem;
+  padding-top: 6rem;
   padding-left: 5rem;
 }
 
@@ -334,7 +334,7 @@ body > footer {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
-  padding-top: 14rem;
+  padding-top: 16rem;
   color: var(--very-dark-violet);
   font-size: 1rem;
 }
