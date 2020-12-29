@@ -1,0 +1,29 @@
+.btn {
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  background: transparent;
+  font-weight: 700;
+  font-size: 1rem;
+  max-height: 38px;
+  max-width: 166px;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  &:hover {
+    color: var(--dark-violet) !important;
+    background-color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+  }
+}
+.violet--btn {
+  color: var(--very-dark-violet);
+  border: 2px solid var(--dark-violet);
+
+  &:hover {
+    color: var(--very-light-gray) !important;
+    background-color: var(--dark-violet);
+  }
+}
