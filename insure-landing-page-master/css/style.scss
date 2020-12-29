@@ -15,6 +15,9 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 button:focus {
   outline: none;
 }
@@ -269,7 +272,7 @@ body {
   background: url(../images/bg-pattern-how-we-work-desktop.svg) no-repeat right top,
     var(--dark-violet);
   padding: 3rem 2rem;
-  margin-top: 3rem;
+  margin-top: 8rem;
   display: grid;
   grid-template-columns: 5fr 7fr;
   align-items: center;
@@ -294,7 +297,7 @@ body {
 }
 
 .main-footer {
-  margin-top: 6rem;
+  margin-top: 8rem;
   padding-bottom: 6rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
