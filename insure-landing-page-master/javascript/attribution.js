@@ -2,9 +2,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const attribution = document.createElement("div");
   attribution.classList.add("attribution");
-  const attributionMentor = "margin-bottom:.6rem;";
-  const attributionP = "margin-bottom:4px;";
-  const attributionA = "color:hsl(228,45%,90%);text-decoration:none;";
+  attribution.style.boxShadow = `0 0px 4.2px -4px rgba(0, 0, 0, 0.072), 0 0px 7px -4px rgba(0, 0, 0, 0.114),
+  0 0px 15px -4px rgba(0, 0, 0, 0.2)`;
   attribution.style = attributionStyle;
   attribution.innerHTML = `
     <div style=${attributionContainerStyle}>
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a style=${attributionA} href="https://twitter.com/mfarid_se">Mohamed Farid</a>
       </div>
       <button id="toggle-attribution" aria-label="toogle-attribution "style=${toggleAttributionBtn} >
-        <svg width="16" height="32" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="16" height="32" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg" style=${toggleAttributionBtnSvg}>
         <path d="M1 1L6.98764 8.36941C7.28616 8.73681 7.28616 9.26319 6.98764 9.63059L1 17" stroke="white" stroke-width="2"/>
         </svg>
       </button>
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(attribution);
     const toggleAttributionBtn = document.querySelector("#toggle-attribution");
     const attributionSvg = attribution.querySelector("svg");
-    attributionSvg.style.transition = "all 300ms ease-in-out";
+
     toggleAttributionBtn.addEventListener("click", () => {
       if (attribution.classList.contains("opened")) {
         attribution.classList.remove("opened");
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         attributionSvg.style.transform = "";
       } else {
         attribution.classList.add("opened");
-        attribution.style.transform = " translate(180px)";
+        attribution.style.transform = "translate(180px)";
         attributionSvg.style.transform = "rotate(180deg)";
       }
     });
@@ -48,7 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function removeSpace(str) {
   return str.replace(/\s/g, "");
 }
-
+const attributionMentor = "margin-bottom:.6rem;";
+const attributionP = "margin-bottom:4px;";
+const attributionA = "text-decoration:none;";
 const attributionStyle = removeSpace(`
   position: fixed;
   bottom: 20vh;
@@ -65,10 +66,11 @@ const attributionContainerStyle = removeSpace(`
   justify-content: space-around;
   padding: 1rem;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 16px;
   text-align: center;
-  background: hsl(216, 53%, 9%);
-  color: #fefefe;
+  background: rgba(0,0,0,.07);
+  font-weight:700;
+  color: #000;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   `);
@@ -88,3 +90,9 @@ const toggleAttributionBtn = removeSpace(`position: absolute;
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
   `);
+
+const toggleAttributionBtnSvg = removeSpace(`
+  transition-property:all;
+  transition-duration:300ms;
+  transition-timing-function:ease-in-out;
+`);
