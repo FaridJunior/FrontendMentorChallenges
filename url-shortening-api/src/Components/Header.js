@@ -9,7 +9,7 @@ function Header() {
       <div className="container">
         <img src={logo} alt="app logo" className="logo" />
         <input type="checkbox" name="toggle-btn" id="toggle-btn" className="toggle-btn" />
-        <label forhtml="toggle-btn" className="toggle-btn-label">
+        <label htmlFor="toggle-btn" className="toggle-btn-label">
           <span className="open-icon">
             <img src={openMenuIcon} alt=" open menu" />
           </span>

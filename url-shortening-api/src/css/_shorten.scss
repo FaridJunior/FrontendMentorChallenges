@@ -65,9 +65,11 @@
       flex-direction: row;
       align-items: center;
       overflow: hidden;
+      padding: 3rem;
       height: $formHeight;
       .shorten-desktop-BG {
         position: absolute;
+        width: 100%;
         top: 0px;
         right: 0px;
         left: 0px;

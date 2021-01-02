@@ -54,7 +54,7 @@ function Footer() {
               />
             </svg>
           </a>
-          <a href="https://www.printest.com" className="social-icon printest">
+          <a href="https://www.pinterest.com" className="social-icon pinterest">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
                 fill="#FFF"

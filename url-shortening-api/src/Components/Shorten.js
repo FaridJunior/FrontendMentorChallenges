@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import shortenMobileBG from "../images/bg-shorten-mobile.svg";
 import shortenDesktopBG from "../images/bg-shorten-desktop.svg";
 function Shorten() {
+  const [currentLink, setCurrentLink] = useState("");
+  const [links, setLinks] = useState([]);
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    fetch(`https://api.shrtco.de/v2/shorten?url=${currentLink}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.ok) {
+          setLinks([...links, { link: currentLink, shortLink: data.result["full_short_link2"] }]);
+          setCurrentLink("");
+        } else {
+          alert("invalid link");
+        }
+      });
+    //
+  }
+
+  function handleChange(e) {
+    setCurrentLink(e.target.value);
+  }
+
   return (
     <section className="shorten-it">
       <div className="container">
-        <form action="#">
+        <form action="" onSubmit={handleFormSubmit}>
           <img
             src={shortenMobileBG}
             alt="background"
@@ -18,19 +39,26 @@ function Shorten() {
             aria-hidden="true"
             className="shorten-desktop-BG"
           />
-          <input type="text" placeholder="Shorten a linke Here." />
+          <input
+            type="text"
+            placeholder="Shorten a linke Here."
+            value={currentLink}
+            onChange={handleChange}
+          />
           <input type="submit" className=" secondary-btn" value="Shorten It" />
         </form>
-
-        <div className="result">
-          <h3 className="result__heading tp">http://example.com </h3>
-          <div className="">
-            <a href="http://example.com" className="result__url">
-              http://example.com
-            </a>
-            <button className="secondary-btn">Copy</button>
-          </div>
-        </div>
+        {links &&
+          links.map((link, i) => (
+            <div className="result" key={i}>
+              <h3 className="result__heading tp">{link["link"]}</h3>
+              <div className="">
+                <a href={link["shortLink"]} className="result__url">
+                  {link["shortLink"]}
+                </a>
+                <button className="secondary-btn">Copy</button>
+              </div>
+            </div>
+          ))}
       </div>
     </section>
   );
