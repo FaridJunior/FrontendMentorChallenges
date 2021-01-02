@@ -3,6 +3,7 @@ import shortenMobileBG from "../images/bg-shorten-mobile.svg";
 import shortenDesktopBG from "../images/bg-shorten-desktop.svg";
 function Shorten() {
   const [currentLink, setCurrentLink] = useState("");
+  const [error, setError] = useState(false);
   const [links, setLinks] = useState([]);
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -13,8 +14,12 @@ function Shorten() {
           setLinks([...links, { link: currentLink, shortLink: data.result["full_short_link2"] }]);
           setCurrentLink("");
         } else {
-          alert("invalid link");
+          // alert("invalid link");
+          setError(true);
         }
+      })
+      .catch(() => {
+        setError(true);
       });
     //
   }
@@ -26,7 +31,7 @@ function Shorten() {
   return (
     <section className="shorten-it">
       <div className="container">
-        <form action="" onSubmit={handleFormSubmit}>
+        <form action="" onSubmit={handleFormSubmit} className={error ? "error" : ""}>
           <img
             src={shortenMobileBG}
             alt="background"
@@ -39,12 +44,15 @@ function Shorten() {
             aria-hidden="true"
             className="shorten-desktop-BG"
           />
-          <input
-            type="text"
-            placeholder="Shorten a linke Here."
-            value={currentLink}
-            onChange={handleChange}
-          />
+          <div className="input">
+            <input
+              type="text"
+              placeholder="Shorten a linke Here."
+              value={currentLink}
+              onChange={handleChange}
+            />
+            <p className="error-message">Please add a link </p>
+          </div>
           <input type="submit" className=" secondary-btn" value="Shorten It" />
         </form>
         {links &&

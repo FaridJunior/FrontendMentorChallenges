@@ -207,6 +207,7 @@ header .container .border-bottom {
         grid-template-columns: repeat(12, 1fr);
     -ms-flex-line-pack: center;
         align-content: center;
+    grid-gap: 1rem;
     padding: 0;
     width: 100%;
   }
@@ -279,8 +280,8 @@ header .container .border-bottom {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    min-width: 140%;
-    min-height: 120%;
+    min-width: 120%;
+    min-height: 110%;
   }
   .hero .hero-data {
     -webkit-box-ordinal-group: 2;
@@ -335,7 +336,8 @@ header .container .border-bottom {
   border-radius: 0.4rem;
 }
 
-.shorten-it form input {
+.shorten-it form input,
+.shorten-it form .input {
   z-index: 2;
   border-radius: 0.3rem;
   padding: 0.7rem 1rem;
@@ -362,6 +364,33 @@ header .container .border-bottom {
 
 .shorten-it form input[type="text"]::placeholder {
   color: var(--dark-gray);
+}
+
+.shorten-it .input input {
+  width: 100%;
+}
+
+.shorten-it p.error-message {
+  display: none;
+}
+
+.shorten-it form.error input[type="text"] {
+  border: 3px solid var(--red);
+  color: var(--red);
+}
+
+.shorten-it form.error .input {
+  position: relative;
+}
+
+.shorten-it form.error p.error-message {
+  position: absolute;
+  display: block;
+  color: var(--red);
+  font-style: italic;
+  left: 1rem;
+  bottom: -1.5rem;
+  font-size: 0.8rem;
 }
 
 .shorten-it .shorten-desktop-BG {
@@ -430,7 +459,7 @@ header .container .border-bottom {
     display: block;
     z-index: 1;
   }
-  .shorten-it form input[type="text"] {
+  .shorten-it form .input {
     -webkit-box-flex: 8;
         -ms-flex: 8;
             flex: 8;
@@ -516,6 +545,7 @@ header .container .border-bottom {
             justify-content: space-between;
     height: 0.6rem;
     width: 100%;
+    gap: 3rem;
   }
   .statistics .statistic-cards .statistic {
     min-width: auto;
