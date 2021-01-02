@@ -52,6 +52,9 @@ button:focus {
   margin: 0 auto;
   width: 90%;
   max-width: 1440px;
+  @media screen and (min-width: 1027px) {
+    width: 80%;
+  }
 }
 
 @import "header";
@@ -65,7 +68,7 @@ button:focus {
 $min_width: 400;
 $max_width: 800;
 $min_font: 12;
-$max_font: 24;
+$max_font: 18;
 
 :root {
   font-size: #{$min_font}px;

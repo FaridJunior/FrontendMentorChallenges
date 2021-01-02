@@ -8,12 +8,12 @@ function Header() {
     <header>
       <div className="container">
         <img src={logo} alt="app logo" className="logo" />
-        <input type="checkbox" name="toggle-btn" id="toggle-btn" class="toggle-btn" />
-        <label for="toggle-btn" class="toggle-btn-label">
-          <span class="open-icon">
+        <input type="checkbox" name="toggle-btn" id="toggle-btn" className="toggle-btn" />
+        <label forhtml="toggle-btn" className="toggle-btn-label">
+          <span className="open-icon">
             <img src={openMenuIcon} alt=" open menu" />
           </span>
-          <span class="close-icon">
+          <span className="close-icon">
             <img src={closeIcon} alt="close  menu" />
           </span>
         </label>

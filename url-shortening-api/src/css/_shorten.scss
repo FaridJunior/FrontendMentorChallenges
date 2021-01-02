@@ -27,6 +27,9 @@
       color: var(--dark-gray);
     }
   }
+  .shorten-desktop-BG {
+    display: none;
+  }
   .shorten-mobile-BG {
     top: 0px;
     right: 0px;
@@ -56,6 +59,36 @@
   @media screen and (min-width: 1027px) {
     .shorten-mobile-BG {
       display: none;
+    }
+    $imgHeight: 220px;
+    form {
+      flex-direction: row;
+      align-items: center;
+      overflow: hidden;
+      height: $formHeight;
+      .shorten-desktop-BG {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        display: block;
+        z-index: 1;
+      }
+      input[type="text"] {
+        flex: 8;
+      }
+    }
+    .result {
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        border-bottom: none;
+      }
+      div {
+        flex-direction: row;
+        align-items: center;
+      }
     }
   }
 }

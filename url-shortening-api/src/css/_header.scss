@@ -80,7 +80,7 @@ header {
     }
 
     @media (min-width: 1027px) {
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(16, 1fr);
       font-size: 0.8rem;
       color: var(--dark-gray);
       .logo {
@@ -99,9 +99,10 @@ header {
       }
       nav ul {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(12, 1fr);
         align-content: center;
         padding: 0;
+        width: 100%;
       }
       nav ul li {
         display: flex;

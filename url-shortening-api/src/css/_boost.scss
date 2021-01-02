@@ -3,7 +3,6 @@
   background: var(--dark-violet);
   color: #fff;
   $imgHeight: 300px;
-
   .boost-mobile-bg {
     position: absolute;
     top: 0;
@@ -24,9 +23,27 @@
       font-size: 1.5rem;
     }
   }
-  @media screen and (min-width: 1027) {
+  .boost-Desktop-bg {
+    display: none;
+  }
+  @media (min-width: 1027px) {
+    .container {
+      gap: 0.5rem;
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
     .boost-mobile-bg {
       display: none;
+    }
+    .boost-Desktop-bg {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      right: 0px;
+      z-index: 1;
     }
   }
 }

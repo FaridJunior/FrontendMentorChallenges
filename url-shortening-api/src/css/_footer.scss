@@ -19,11 +19,16 @@
     .social-icons {
       display: flex;
       .social-icon:hover svg path {
-        fill: var(--primary);
+        fill: var(--very-light-gray);
       }
       .social-icon:not(:last-child) {
         margin-right: 1.3rem;
       }
+    }
+  }
+  @media screen and (min-width: 1027px) {
+    .container {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import shortenMobileBG from "../images/bg-shorten-mobile.svg";
+import shortenDesktopBG from "../images/bg-shorten-desktop.svg";
 function Shorten() {
   return (
     <section className="shorten-it">
@@ -10,6 +11,12 @@ function Shorten() {
             alt="background"
             aria-hidden="true"
             className="shorten-mobile-BG"
+          />
+          <img
+            src={shortenDesktopBG}
+            alt="background"
+            aria-hidden="true"
+            className="shorten-desktop-BG"
           />
           <input type="text" placeholder="Shorten a linke Here." />
           <input type="submit" className=" secondary-btn" value="Shorten It" />

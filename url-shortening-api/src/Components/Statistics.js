@@ -14,30 +14,31 @@ function Statistics() {
             dashboard.
           </p>
         </div>
-
-        <div className="statistic">
-          <img src={brandRecognition} alt="" className="statistic__icon" />
-          <h3 className="statistic__heading tp">Brand Recognition</h3>
-          <p className="statistic__suptitle ts">
-            Boost your brand recognition with each click. Generic links don’t mean a thing. Branded
-            links help instil confidence in your content.
-          </p>
-        </div>
-        <div className="statistic">
-          <img src={detailedRecords} alt="" className="statistic__icon" />
-          <h3 className="statistic__heading tp">Detailed Records</h3>
-          <p className="statistic__suptitle ts">
-            Gain insights into who is clicking your links. Knowing when and where people engage with
-            your content helps inform better decisions.
-          </p>
-        </div>
-        <div className="statistic">
-          <img src={fullyCustomizable} alt="" className="statistic__icon" />
-          <h3 className="statistic__heading tp">Fully Customizable</h3>
-          <p className="statistic__suptitle ts">
-            Improve brand awareness and content discoverability through customizable links,
-            supercharging audience engagement.
-          </p>
+        <div className="statistic-cards">
+          <div className="statistic">
+            <img src={brandRecognition} alt="" className="statistic__icon" />
+            <h3 className="statistic__heading tp">Brand Recognition</h3>
+            <p className="statistic__suptitle ts">
+              Boost your brand recognition with each click. Generic links don’t mean a thing.
+              Branded links help instil confidence in your content.
+            </p>
+          </div>
+          <div className="statistic">
+            <img src={detailedRecords} alt="" className="statistic__icon" />
+            <h3 className="statistic__heading tp">Detailed Records</h3>
+            <p className="statistic__suptitle ts">
+              Gain insights into who is clicking your links. Knowing when and where people engage
+              with your content helps inform better decisions.
+            </p>
+          </div>
+          <div className="statistic">
+            <img src={fullyCustomizable} alt="" className="statistic__icon" />
+            <h3 className="statistic__heading tp">Fully Customizable</h3>
+            <p className="statistic__suptitle ts">
+              Improve brand awareness and content discoverability through customizable links,
+              supercharging audience engagement.
+            </p>
+          </div>
         </div>
       </div>
     </section>
