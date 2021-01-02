@@ -1,0 +1,32 @@
+.boost {
+  position: relative;
+  background: var(--dark-violet);
+  color: #fff;
+  $imgHeight: 300px;
+
+  .boost-mobile-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    max-height: $imgHeight;
+  }
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    min-height: $imgHeight;
+    z-index: 10;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 1027) {
+    .boost-mobile-bg {
+      display: none;
+    }
+  }
+}

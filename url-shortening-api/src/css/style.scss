@@ -7,13 +7,16 @@
   --red: hsl(0, 87%, 67%);
   // Neutral
   --light-gray: hsl(0, 0%, 75%);
+  --very-light-gray: rgb(240, 239, 246);
   --dark-gray: hsl(257, 7%, 63%);
   --secondary-black: hsl(255, 11%, 22%);
   --main-black: hsl(260, 8%, 14%);
   --white: #fff;
+
   // Typography
   font-family: "Poppins", sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 
 *,
@@ -40,13 +43,43 @@ button:focus {
 }
 
 .tp {
-  color: var(--main-black);
+  color: var(--secondary-black);
 }
 .ts {
-  color: var(--secondary-black);
+  color: var(--dark-gray);
 }
 .container {
   margin: 0 auto;
   width: 90%;
-  max-width: 1440;
+  max-width: 1440px;
+}
+
+@import "header";
+@import "hero";
+@import "btn";
+@import "shorten";
+@import "statistics";
+@import "boost";
+@import "footer";
+//  responsive typo graphic  from here https://codepen.io/tammalee/pen/EEOagK
+$min_width: 400;
+$max_width: 800;
+$min_font: 12;
+$max_font: 24;
+
+:root {
+  font-size: #{$min_font}px;
+}
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
+  :root {
+    font-size: calc(
+      #{$min_font}px + (#{$max_font} - #{$min_font}) *
+        ((100vw - #{$min_width}px) / (#{$max_width} - #{$min_width}))
+    );
+  }
+}
+@media (min-width: #{$max_width}px) {
+  :root {
+    font-size: #{$max_font}px;
+  }
 }

@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   font-size: 11px;
   text-align: center;
-  margin-top: 6rem;
 `;
 const Link = styled.a`
   color: hsl(228, 45%, 44%);

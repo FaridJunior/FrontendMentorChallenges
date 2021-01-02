@@ -1,0 +1,29 @@
+.footer {
+  background: var(--main-black);
+  text-align: center;
+  padding: 4rem 0px;
+  .container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 2rem;
+    .footer-section.logo svg path {
+      fill: var(--white);
+    }
+    h4 {
+      margin-top: 0;
+      color: var(--white);
+    }
+    li {
+      color: var(--light-gray);
+    }
+    .social-icons {
+      display: flex;
+      .social-icon:hover svg path {
+        fill: var(--primary);
+      }
+      .social-icon:not(:last-child) {
+        margin-right: 1.3rem;
+      }
+    }
+  }
+}

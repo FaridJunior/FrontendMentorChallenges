@@ -5,14 +5,16 @@ import Footer from "./Components/Footer";
 import Statistics from "./Components/Statistics";
 import Hero from "./Components/Hero";
 import Header from "./Components/Header";
-import GetStartedSection from "./Components/GetStartedSection";
+import Boost from "./Components/Boost";
+import Shorten from "./Components/Shorten";
 function App() {
   return (
     <div className="App">
       <Header />
       <Hero />
+      <Shorten />
       <Statistics />
-      <GetStartedSection />
+      <Boost />
       <Footer />
       <Attribution />
     </div>

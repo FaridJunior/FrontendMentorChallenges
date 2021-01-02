@@ -1,0 +1,16 @@
+.btn {
+  border: none;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 28px;
+  padding: 0.7rem 2rem;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.secondary-btn {
+  @extend .btn;
+  border-radius: 4px;
+  font-weight: 700;
+}
