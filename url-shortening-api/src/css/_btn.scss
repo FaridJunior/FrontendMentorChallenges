@@ -1,0 +1,19 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 28px;
+  padding: 0.7rem 2rem;
+  display: inline-block;
+  font-weight: 700;
+  &:hover {
+    color: #fff !important;
+    filter: brightness(1.1);
+  }
+}
+
+.secondary-btn {
+  @extend .btn;
+  border-radius: 4px;
+}

@@ -1,0 +1,16 @@
+{
+  "short_name": "url-shortening-api ",
+  "name": "url-shortening-api  ",
+  "icons": [
+    {
+      "src": "./images/favicon-32-32.png",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "author": "Mohamed Farid",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

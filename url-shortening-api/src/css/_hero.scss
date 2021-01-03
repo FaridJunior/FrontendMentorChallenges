@@ -1,0 +1,44 @@
+.hero {
+  padding: 8rem 0;
+  overflow: hidden;
+
+  .container {
+    .hero-img {
+      max-width: 100%;
+    }
+    .hero__heading {
+      font-size: 3rem;
+      line-height: 1em;
+      margin-bottom: 0rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.25rem;
+      margin: 2rem 0px;
+      margin-top: 0px;
+    }
+  }
+
+  @media (min-width: 1027px) {
+    padding: 10rem 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-gap: 1rem;
+      text-align: left;
+    }
+
+    img {
+      order: 2;
+      min-width: 120%;
+      min-height: 110%;
+    }
+    .hero-data {
+      order: 1;
+      .hero__heading {
+        font-size: 4rem;
+      }
+    }
+  }
+}

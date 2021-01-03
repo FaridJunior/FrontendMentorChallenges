@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+:root {
+  // Primary
+  --primary: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+  // Secondary
+  --red: hsl(0, 87%, 67%);
+  // Neutral
+  --light-gray: hsl(0, 0%, 75%);
+  --very-light-gray: rgb(240, 239, 246);
+  --dark-gray: hsl(257, 7%, 63%);
+  --secondary-black: hsl(255, 11%, 22%);
+  --main-black: hsl(260, 8%, 14%);
+  --white: #fff;
+
+  // Typography
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+div,
+ul {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input:focus,
+button:focus {
+  outline: 2px dotted var(--primary);
+}
+
+.tp {
+  color: var(--secondary-black);
+}
+.ts {
+  color: var(--dark-gray);
+}
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1440px;
+  @media screen and (min-width: 1027px) {
+    width: 80%;
+  }
+}
+.sr-only {
+  display: none;
+}
+
+@import "header";
+@import "hero";
+@import "btn";
+@import "shorten";
+@import "statistics";
+@import "boost";
+@import "footer";
+//  responsive typo graphic  from here https://codepen.io/tammalee/pen/EEOagK
+$min_width: 400;
+$max_width: 800;
+$min_font: 12;
+$max_font: 18;
+
+:root {
+  font-size: #{$min_font}px;
+}
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
+  :root {
+    font-size: calc(
+      #{$min_font}px + (#{$max_font} - #{$min_font}) *
+        ((100vw - #{$min_width}px) / (#{$max_width} - #{$min_width}))
+    );
+  }
+}
+@media (min-width: #{$max_width}px) {
+  :root {
+    font-size: #{$max_font}px;
+  }
+}

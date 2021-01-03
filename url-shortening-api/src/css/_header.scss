@@ -1,0 +1,133 @@
+header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  min-width: 100vw;
+  background: var(--white);
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    .logo {
+      grid-column: span 2;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    .toggle-btn {
+      display: none;
+    }
+    .toggle-btn-label {
+      grid-column: span 1 /-1;
+      justify-self: end;
+      width: 40px;
+      span {
+        cursor: pointer;
+      }
+    }
+    .toggle-btn:checked ~ nav {
+      transform: scaleY(1);
+      a {
+        opacity: 1;
+        transition: opacity 200ms ease-in-out 200ms; // it used while open
+      }
+    }
+
+    .close-icon {
+      display: none;
+    }
+
+    .toggle-btn:checked ~ .toggle-btn-label {
+      .close-icon {
+        display: block;
+      }
+      .open-icon {
+        display: none;
+      }
+    }
+
+    nav {
+      position: absolute;
+      top: 100%;
+      width: 80%;
+      left: 10%;
+      background: var(--dark-violet);
+      color: var(--white);
+      border-radius: 20px;
+      transition: transform 400ms ease-in-out;
+      transform-origin: top;
+      transform: scaleY(0);
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+    }
+    nav li {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+
+    nav ul a {
+      opacity: 0;
+      transition: opacity 200ms ease-in-out; // it is used while close
+    }
+    .border-bottom {
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid hsla(257, 7%, 63%, 0.3);
+    }
+
+    @media (min-width: 1027px) {
+      grid-template-columns: repeat(16, 1fr);
+      font-size: 0.8rem;
+      color: var(--dark-gray);
+      .logo {
+        justify-self: start;
+      }
+      .toggle-btn-label {
+        display: none;
+      }
+      nav {
+        all: unset;
+        grid-column: 3/-1;
+        grid-row: 1 / span 1;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+      }
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-content: center;
+        grid-gap: 1rem;
+        padding: 0;
+        width: 100%;
+      }
+      nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      nav ul li:nth-of-type(5) {
+        grid-column: -1;
+      }
+      nav ul li:nth-of-type(4) {
+        grid-column: -2;
+      }
+      nav ul a {
+        opacity: 1;
+      }
+      nav ul a:hover {
+        color: var(--main-black);
+      }
+      .border-bottom {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}
