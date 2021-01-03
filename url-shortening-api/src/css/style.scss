@@ -56,6 +56,9 @@ button:focus {
     width: 80%;
   }
 }
+.sr-only {
+  display: none;
+}
 
 @import "header";
 @import "hero";

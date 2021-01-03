@@ -1,11 +1,15 @@
 .statistics {
-  padding: 8rem 0rem;
+  padding: 6rem 0rem 8rem 0rem;
   background: var(--very-light-gray);
   .container {
     display: grid;
-    grid-gap: 3rem;
+    grid-gap: 6rem;
   }
-
+  .statistics__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .statistics__heading {
     margin: 0px;
     font-size: 2rem;
@@ -13,6 +17,7 @@
   .statistics__subtitles {
     margin: 0.6rem;
     font-size: 1.3rem;
+    max-width: 45ch;
   }
   .statistic-cards {
     position: relative;

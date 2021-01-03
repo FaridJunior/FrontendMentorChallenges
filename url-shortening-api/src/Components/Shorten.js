@@ -47,29 +47,41 @@ function Shorten() {
           <div className="input">
             <input
               type="text"
-              placeholder="Shorten a linke Here."
+              placeholder="Shorten a link Here."
               value={currentLink}
               onChange={handleChange}
+              aria-label="shorten-link"
             />
             <p className="error-message">Please add a link </p>
           </div>
           <input type="submit" className=" secondary-btn" value="Shorten It" />
         </form>
-        {links &&
-          links.map((link, i) => (
-            <div className="result" key={i}>
-              <h3 className="result__heading tp">{link["link"]}</h3>
-              <div className="">
-                <a href={link["shortLink"]} className="result__url">
-                  {link["shortLink"]}
-                </a>
-                <button className="secondary-btn">Copy</button>
-              </div>
-            </div>
-          ))}
+        {links && links.map((link, i) => <Resullt link={link} id={i} />)}
       </div>
     </section>
   );
 }
 
 export default Shorten;
+
+const Resullt = ({ link, i }) => {
+  function copyToClipboard(e) {
+    navigator.clipboard.writeText(link["shortLink"]);
+    e.target.focus();
+  }
+
+  return (
+    <div className="result" key={i}>
+      <h3 className="result__heading tp">{link["link"]}</h3>
+      <div className="">
+        <a href={link["shortLink"]} className="result__url">
+          {link["shortLink"]}
+        </a>
+        <button className="secondary-btn" onClick={copyToClipboard}>
+          <span className="copy">Copy</span>
+          <span className="copied">Copied!</span>
+        </button>
+      </div>
+    </div>
+  );
+};

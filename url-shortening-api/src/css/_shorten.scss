@@ -1,7 +1,7 @@
 .shorten-it {
   background: var(--very-light-gray);
   $formHeight: 134px;
-  padding-bottom: 7rem;
+  padding-bottom: 2rem;
   form {
     position: relative;
     top: -$formHeight / 2;
@@ -81,6 +81,17 @@
       a {
         font-size: 1.2rem;
         color: var(--primary);
+      }
+    }
+    span.copied {
+      display: none;
+    }
+    button:focus {
+      span.copied {
+        display: inline;
+      }
+      span.copy {
+        display: none;
       }
     }
   }

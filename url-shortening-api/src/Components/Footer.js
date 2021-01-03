@@ -38,7 +38,9 @@ function Footer() {
           </ul>
         </div>
         <div className="footer-section social-icons">
-          <a href="https:facebook.com" className="social-icon facebook">
+          <a href="https:facebook.com" className="social-icon facebook" id="facebook">
+            <span className="sr-only">facebook</span>
+
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
                 fill="#FFF"
@@ -46,7 +48,8 @@ function Footer() {
               />
             </svg>
           </a>
-          <a href="https://twitter.com" className="social-icon twitter">
+          <a href="https://twitter.com" className="social-icon twitter" id="twitter">
+            <span className="sr-only">twitter</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
               <path
                 fill="#FFF"
@@ -54,7 +57,9 @@ function Footer() {
               />
             </svg>
           </a>
-          <a href="https://www.pinterest.com" className="social-icon pinterest">
+          <a href="https://www.pinterest.com" className="social-icon pinterest" id="printerest">
+            <span className="sr-only">printerest</span>
+
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
                 fill="#FFF"
@@ -62,7 +67,8 @@ function Footer() {
               />
             </svg>
           </a>
-          <a href="https://instgram.com" className="social-icon instgram">
+          <a href="https://instgram.com" className="social-icon instgram" id="instgram">
+            <span className="sr-only">instgram</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
                 fill="#FFF"

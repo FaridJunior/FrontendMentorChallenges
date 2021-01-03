@@ -7,7 +7,7 @@ function Statistics() {
   return (
     <section className="statistics">
       <div className="container">
-        <div className="">
+        <div className="statistics__header">
           <h2 className="statistics__heading tp"> Advanced Statistics</h2>
           <p className="statistics__subtitles ts">
             Track how your links are performing across the web with our advanced statistics
