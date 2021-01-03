@@ -31,7 +31,12 @@ function Shorten() {
   return (
     <section className="shorten-it">
       <div className="container">
-        <form action="" onSubmit={handleFormSubmit} className={error ? "error" : ""}>
+        <form
+          action=""
+          onSubmit={handleFormSubmit}
+          className={error ? "error" : ""}
+          onFocus={() => setError(false)}
+        >
           <img
             src={shortenMobileBG}
             alt="background"

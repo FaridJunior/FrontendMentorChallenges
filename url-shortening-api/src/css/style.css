@@ -350,7 +350,7 @@ header .container .border-bottom {
 .shorten-it form input[type="text"] {
   border: none;
   font-size: 700;
-  color: var(--dark-gray);
+  color: var(--main-black);
 }
 
 .shorten-it form input[type="text"]::-webkit-input-placeholder {
