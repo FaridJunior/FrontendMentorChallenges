@@ -25,13 +25,13 @@ header {
   transform-origin: top right;
   border-bottom-left-radius: 50%;
   border-top-left-radius: 50%;
-  border-bottom-right-radius: 20%;
+  border-bottom-right-radius: 50%;
   transform: scale(0);
 }
 
 .navlinks {
+  overflow: hidden;
   position: absolute;
-  // top: 0px;
   left: 0;
   right: 0;
   display: flex;
@@ -75,6 +75,7 @@ header {
   [aria-expanded="true"] ~ .navlinks .navlink:nth-child(#{$var}) {
     display: flex;
     transform: translateX(0px);
+    transition: transform 400ms;
     transition-delay: 400ms + 200ms * $var;
   }
 }

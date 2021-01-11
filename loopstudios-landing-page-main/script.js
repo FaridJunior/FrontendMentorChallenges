@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.setAttribute("aria-expanded", true);
     expandedMenuBg.style.setProperty(
       "transition",
-      "transform 1000ms cubic-bezier(.31,.59,.35,.92), border-end-start-radius 1000ms  cubic-bezier(.2,.4,.81,.92), border-start-start-radius 1000ms  cubic-bezier(.2,.4,.81,.92), border-bottom-right-radius 1000ms  cubic-bezier(.2,.4,.81,.92)"
+      "transform 1000ms ease-out, border-bottom-left-radius 1000ms  ease-out, border-top-left-radius 1000ms  ease-out, border-bottom-right-radius 1000ms  ease-out"
     );
     expandedMenuBg.style.transform = "scale(1)";
-    expandedMenuBg.style.setProperty("border-end-start-radius", "0%");
+    expandedMenuBg.style.setProperty("border-bottom-left-radius", "0%");
     expandedMenuBg.style.setProperty("border-top-left-radius", "0%");
     expandedMenuBg.style.setProperty("border-bottom-right-radius", "0%");
   }
@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.setAttribute("aria-expanded", false);
     expandedMenuBg.style.setProperty(
       "transition",
-      "transform 600ms, border-end-start-radius 100ms, border-top-left-radius 100ms,border-bottom-right-radius 100ms"
+      "transform 600ms, border-bottom-left-radius 100ms, border-top-left-radius 100ms,border-bottom-right-radius 100ms"
     );
     expandedMenuBg.style.setProperty("transform", "scale(0)");
-    expandedMenuBg.style.setProperty("border-end-start-radius", "100%");
+    expandedMenuBg.style.setProperty("border-bottom-left-radius", "50%");
     expandedMenuBg.style.setProperty("border-top-left-radius", "50%");
-    expandedMenuBg.style.setProperty("border-bottom-right-radius", "20%");
+    expandedMenuBg.style.setProperty("border-bottom-right-radius", "50%");
   }
 });

@@ -78,12 +78,13 @@ header .logo {
           transform-origin: top right;
   border-bottom-left-radius: 50%;
   border-top-left-radius: 50%;
-  border-bottom-right-radius: 20%;
+  border-bottom-right-radius: 50%;
   -webkit-transform: scale(0);
           transform: scale(0);
 }
 
 .navlinks {
+  overflow: hidden;
   position: absolute;
   left: 0;
   right: 0;
@@ -145,6 +146,10 @@ header .logo {
   display: flex;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
   -webkit-transition-delay: 600ms;
           transition-delay: 600ms;
 }
@@ -155,6 +160,10 @@ header .logo {
   display: flex;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
   -webkit-transition-delay: 800ms;
           transition-delay: 800ms;
 }
@@ -165,6 +174,10 @@ header .logo {
   display: flex;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
   -webkit-transition-delay: 1000ms;
           transition-delay: 1000ms;
 }
@@ -175,6 +188,10 @@ header .logo {
   display: flex;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
   -webkit-transition-delay: 1200ms;
           transition-delay: 1200ms;
 }
