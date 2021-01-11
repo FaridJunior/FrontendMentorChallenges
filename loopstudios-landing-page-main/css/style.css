@@ -4,6 +4,7 @@
   --black: hsl(0, 0%, 0%);
   --dark-gray: hsl(0, 0%, 55%);
   --very-dark-gray: hsl(0, 0%, 41%);
+  font-style: 15px;
 }
 
 *,
@@ -26,7 +27,190 @@ ul {
 
 body {
   font-family: "Alata", sans-serif;
+}
+
+h1,
+h2,
+h3 {
   font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0px auto;
+}
+
+header {
+  color: var(--white);
+  z-index: 9;
+  height: 0vh;
+}
+
+header .container {
+  position: relative;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  padding: 2.5rem 0;
+  width: 170px;
+}
+
+.expanded-menu-bg {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 20%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.navlinks {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  padding-top: 6rem;
+  width: 100%;
+  background: inherit;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navlink {
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: -webkit-transform 100ms;
+  transition: -webkit-transform 100ms;
+  transition: transform 100ms;
+  transition: transform 100ms, -webkit-transform 100ms;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.menu-btn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0.4rem;
+}
+
+.menu-btn__close {
+  display: none;
+}
+
+.menu-btn[aria-expanded="true"] > .menu-btn__close {
+  display: block;
+}
+
+.menu-btn[aria-expanded="true"] > .menu-btn__open {
+  display: none;
+}
+
+[aria-expanded="true"] ~ .navlinks .navlink:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+}
+
+[aria-expanded="true"] ~ .navlinks .navlink:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition-delay: 800ms;
+          transition-delay: 800ms;
+}
+
+[aria-expanded="true"] ~ .navlinks .navlink:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+[aria-expanded="true"] ~ .navlinks .navlink:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition-delay: 1200ms;
+          transition-delay: 1200ms;
+}
+
+.hero {
+  background-image: url(../images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero .container {
+  background: transparent;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.hero__heading {
+  text-transform: uppercase;
+  border: 2px solid currentColor;
+  padding: 1rem;
+  text-align: left;
+  color: var(--white);
+  font-size: 2.7em;
+  line-height: 0.95em;
+  font-weight: 300;
 }
 
 .attribution {
