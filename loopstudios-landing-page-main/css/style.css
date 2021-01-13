@@ -43,6 +43,11 @@ h3 {
   margin: 0px auto;
 }
 
+.sr-only {
+  position: absolute;
+  top: -5000px;
+}
+
 header {
   color: var(--white);
   height: 0vh;
@@ -83,6 +88,11 @@ header .menu-btn .menu-btn[aria-expanded="true"] .menu-btn__close {
 
 header .menu-btn .menu-btn[aria-expanded="true"] .menu-btn__open {
   display: none;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .expanded-menu-bg {
@@ -165,6 +175,11 @@ header .menu-btn .menu-btn[aria-expanded="true"] .menu-btn__open {
           transition-delay: 800ms;
 }
 
+[aria-expanded="true"] ~ .navlinks .navlink:nth-child(5) {
+  -webkit-transition-delay: 950ms;
+          transition-delay: 950ms;
+}
+
 .hero {
   background-image: url(../images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
@@ -224,12 +239,147 @@ header .menu-btn .menu-btn[aria-expanded="true"] .menu-btn__open {
   margin: 0 auto;
 }
 
-.attribution {
-  font-size: 11px;
+.creations {
   text-align: center;
 }
 
+.creations .container {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+.creations .container ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.creations__heading {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.creation {
+  text-align: left;
+  color: var(--white);
+  padding: 3.5rem 1.3rem 1.3rem 1.3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.creation h3 {
+  margin: 0;
+  letter-spacing: 1px;
+  max-width: 10ch;
+  font-size: 1.4rem;
+}
+
+.see-all-btn {
+  margin-top: 2rem;
+}
+
+.creation:nth-of-type(1) {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url(../images/mobile/image-deep-earth.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../images/mobile/image-deep-earth.jpg);
+}
+
+.creation:nth-of-type(2) {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url(../images/mobile/image-night-arcade.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../images/mobile/image-night-arcade.jpg);
+}
+
+.creation:nth-of-type(3) {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url(../images/mobile/image-soccer-team.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../images/mobile/image-soccer-team.jpg);
+}
+
+.creation:nth-of-type(4) {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url(../images/mobile/image-grid.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../images/mobile/image-grid.jpg);
+}
+
+.creation:nth-of-type(5) {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url(../images/mobile/image-from-above.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../images/mobile/image-from-above.jpg);
+}
+
+.creation:nth-of-type(6) {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url(../images/mobile/image-pocket-borealis.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../images/mobile/image-pocket-borealis.jpg);
+}
+
+.creation:nth-of-type(7) {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url(../images/mobile/image-curiosity.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../images/mobile/image-curiosity.jpg);
+}
+
+.creation:nth-of-type(8) {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url(../images/mobile/image-fisheye.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../images/mobile/image-fisheye.jpg);
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.footer .container {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.8rem;
+  padding: 2.5rem 0;
+  justify-items: center;
+}
+
+.footer__links {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.social-icons {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+}
+
+.copyrights {
+  font-size: 0.84rem;
+  color: var(--dark-gray);
+}
+
+.attribution {
+  background: var(--black);
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+  padding: 1rem;
+}
+
 .attribution a {
-  color: #3e52a3;
+  color: var(--dark-gray);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--black);
+  background: var(--white);
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+}
+
+.btn:hover {
+  background: var(--black);
+  color: var(--white);
 }
 /*# sourceMappingURL=style.css.map */

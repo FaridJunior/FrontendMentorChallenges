@@ -41,9 +41,15 @@ h3 {
   max-width: 1440px;
   margin: 0px auto;
 }
+.sr-only {
+  position: absolute;
+  top: -5000px;
+}
 
 @import "header";
 @import "hero";
 @import "about";
+@import "creations";
+@import "footer";
 @import "attribution";
 @import "btns";

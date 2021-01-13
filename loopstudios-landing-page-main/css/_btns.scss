@@ -1,0 +1,17 @@
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--black);
+  background: var(--white);
+  transition: all 100ms;
+}
+.btn:hover {
+  background: var(--black);
+  color: var(--white);
+}

@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  background-color: var(--black);
+  color: var(--white);
+  .container {
+    display: grid;
+    gap: 0.8rem;
+    padding: 2.5rem 0;
+    justify-items: center;
+  }
+}
+
+.footer__links {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.social-icons {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+}
+.copyrights {
+  font-size: 0.84rem;
+  color: var(--dark-gray);
+}

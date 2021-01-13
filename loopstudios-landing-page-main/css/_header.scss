@@ -28,6 +28,10 @@ header {
       }
     }
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .expanded-menu-bg {
@@ -73,7 +77,7 @@ header {
   transition: transform 400ms;
 }
 
-@for $var from 1 to 5 {
+@for $var from 1 through 5 {
   [aria-expanded="true"] ~ .navlinks .navlink:nth-child(#{$var}) {
     transition-delay: 200ms + 150ms * $var;
   }
