@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.setAttribute("aria-expanded", true);
     expandedMenuBg.style.setProperty(
       "transition",
-      "transform 1000ms ease-out, border-bottom-left-radius 1000ms  ease-out, border-top-left-radius 1000ms  ease-out, border-bottom-right-radius 1000ms  ease-out"
+      "transform 400ms ease-in, border-radius 400ms  cubic-bezier(.89,.03,.79,.33)"
     );
     expandedMenuBg.style.transform = "scale(1)";
     expandedMenuBg.style.setProperty("border-bottom-left-radius", "0%");
@@ -24,13 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   function handleMenuClose() {
     menuBtn.setAttribute("aria-expanded", false);
-    expandedMenuBg.style.setProperty(
-      "transition",
-      "transform 600ms, border-bottom-left-radius 100ms, border-top-left-radius 100ms,border-bottom-right-radius 100ms"
-    );
+    expandedMenuBg.style.setProperty("transition", "transform 400ms, border-radius 100ms");
     expandedMenuBg.style.setProperty("transform", "scale(0)");
-    expandedMenuBg.style.setProperty("border-bottom-left-radius", "50%");
-    expandedMenuBg.style.setProperty("border-top-left-radius", "50%");
-    expandedMenuBg.style.setProperty("border-bottom-right-radius", "50%");
+    expandedMenuBg.style.setProperty("border-bottom-left-radius", "100%");
+    expandedMenuBg.style.setProperty("border-top-left-radius", "5%");
+    expandedMenuBg.style.setProperty("border-bottom-right-radius", "5%");
   }
 });

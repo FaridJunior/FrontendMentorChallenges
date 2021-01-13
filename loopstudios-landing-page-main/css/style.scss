@@ -6,7 +6,7 @@
   --black: hsl(0, 0%, 0%);
   --dark-gray: hsl(0, 0%, 55%);
   --very-dark-gray: hsl(0, 0%, 41%);
-  font-style: 15px;
+  font-size: 15px;
 }
 // reset
 *,
@@ -33,14 +33,17 @@ h1,
 h2,
 h3 {
   font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 .container {
-  width: 90%;
+  width: 88%;
   max-width: 1440px;
   margin: 0px auto;
 }
 
 @import "header";
 @import "hero";
+@import "about";
 @import "attribution";
 @import "btns";

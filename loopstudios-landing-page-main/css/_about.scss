@@ -1,0 +1,23 @@
+.about {
+  text-align: center;
+  letter-spacing: 1px;
+
+  .container {
+    padding-top: 6rem;
+  }
+}
+.about__image img {
+  width: 100%;
+}
+.about__heading {
+  padding-top: 1.4rem;
+  font-size: 2rem;
+}
+
+.about__subtitles {
+  color: var(--very-dark-gray);
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  max-width: 75ch;
+  margin: 0 auto;
+}
