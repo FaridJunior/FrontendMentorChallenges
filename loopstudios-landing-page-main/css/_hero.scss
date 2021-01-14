@@ -13,6 +13,12 @@
     justify-content: center;
     align-content: center;
   }
+  @media (min-width: 1024px) {
+    background-image: url(../images/desktop/image-hero.jpg);
+    .hero__heading {
+      max-width: 26rem;
+    }
+  }
 }
 
 .hero__heading {
