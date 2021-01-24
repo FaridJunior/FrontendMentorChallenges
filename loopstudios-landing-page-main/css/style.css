@@ -48,6 +48,25 @@ h3 {
   top: -5000px;
 }
 
+.box {
+  -webkit-transform: translateX(400%);
+          transform: translateX(400%);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.box:nth-of-type(even) {
+  -webkit-transform: translateX(-400%);
+          transform: translateX(-400%);
+}
+
+.box.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 header {
   color: var(--white);
   height: 0vh;
@@ -226,7 +245,7 @@ header a {
 
 .hero .container {
   background: transparent;
-  height: 700px;
+  height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,7 +265,9 @@ header a {
     background-image: url(../images/desktop/image-hero.jpg);
   }
   .hero .hero__heading {
-    max-width: 26rem;
+    max-width: 14ch;
+    font-size: 6rem;
+    line-height: 1.1em;
   }
 }
 
@@ -265,7 +286,7 @@ header a {
 }
 
 .about .container {
-  padding-top: 6rem;
+  padding-top: 8rem;
 }
 
 @media (min-width: 1024px) {
@@ -344,8 +365,8 @@ header a {
 }
 
 .creations .container {
-  padding-top: 6rem;
-  padding-bottom: 5rem;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
 }
 
 @media (min-width: 1024px) {

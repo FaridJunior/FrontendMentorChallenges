@@ -31,3 +31,25 @@ document.addEventListener("DOMContentLoaded", () => {
     expandedMenuBg.style.setProperty("border-bottom-right-radius", "5%");
   }
 });
+
+// this code from => https://codepen.io/nikki-peel/pen/dypEMyp?editors=0110
+const boxes = document.querySelectorAll(".box");
+
+window.addEventListener("scroll", checkBoxes);
+
+checkBoxes(); // shows initial box(es)
+
+function checkBoxes() {
+  console.log("hello world");
+  const triggerBottom = window.innerHeight * 0.7;
+
+  boxes.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      box.classList.add("show");
+    } else {
+      box.classList.remove("show");
+    }
+  });
+}

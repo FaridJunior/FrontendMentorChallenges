@@ -7,7 +7,7 @@
 
   .container {
     background: transparent;
-    height: 700px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,9 @@
   @media (min-width: 1024px) {
     background-image: url(../images/desktop/image-hero.jpg);
     .hero__heading {
-      max-width: 26rem;
+      max-width: 14ch;
+      font-size: 6rem;
+      line-height: 1.1em;
     }
   }
 }
