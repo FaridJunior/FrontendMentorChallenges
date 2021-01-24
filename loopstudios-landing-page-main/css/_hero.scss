@@ -1,0 +1,33 @@
+.hero {
+  background-image: url(../images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // backdrop-filter: contrast(120%); // not work in firfox
+
+  .container {
+    background: transparent;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  @media (min-width: 1024px) {
+    background-image: url(../images/desktop/image-hero.jpg);
+    .hero__heading {
+      max-width: 14ch;
+      font-size: 6rem;
+      line-height: 1.1em;
+    }
+  }
+}
+
+.hero__heading {
+  border: 2px solid currentColor;
+  padding: 1rem;
+  text-align: left;
+  color: var(--white);
+  font-size: 3rem;
+  line-height: 0.95em;
+}
