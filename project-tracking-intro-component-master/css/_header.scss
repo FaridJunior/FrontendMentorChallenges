@@ -1,0 +1,123 @@
+header {
+  --BG: #f57f17;
+  --text-primary: #fff;
+
+  background: transparent;
+  top: 0;
+  z-index: 9999;
+  position: fixed;
+  width: 100vw;
+  display: grid;
+  grid-template-areas: ".   logo .   .   .    menu-switch . ";
+  align-items: center;
+
+  @media (min-width: 800px) {
+    grid-template-areas: "logo nav nav nav   menu-switch";
+    .logo {
+      justify-self: center;
+    }
+    .toggle-btn-label {
+      display: none;
+    }
+    nav {
+      all: unset;
+      grid-area: nav;
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+    }
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: stretch;
+      padding: 0;
+      height: 100%;
+    }
+    nav ul li {
+      display: block;
+      padding: 1.3rem;
+      min-height: 100%;
+    }
+    nav ul li:hover {
+      background: #ff6f00;
+    }
+    nav ul a {
+      opacity: 1;
+    }
+  }
+}
+
+.logo {
+  grid-area: logo;
+  width: 40px;
+  margin: 0.5rem 0px;
+  border-radius: 4px;
+}
+
+.menu-switch {
+}
+.toggle-btn-label {
+  grid-area: menu-switch;
+  justify-self: end;
+  width: 40px;
+  span {
+    cursor: pointer;
+  }
+}
+.toggle-btn {
+  display: none;
+}
+
+.toggle-btn:checked ~ nav {
+  transform: scaleY(1);
+  a {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out 200ms; // it used while open
+  }
+}
+.toggle-btn:checked ~ .toggle-btn-label {
+  .close-icon {
+    display: block;
+  }
+  .open-icon {
+    display: none;
+  }
+}
+.close-icon {
+  display: none;
+}
+
+nav {
+  font-family: "Roboto Mono", monospace;
+  top: 100%;
+  width: 100vw;
+  background: var(--BG);
+  position: absolute;
+  transition: transform 400ms ease-in-out;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+nav ul {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+nav li {
+  margin: 0;
+  list-style: none;
+}
+
+nav ul a {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out; // it is used while close
+  text-decoration: none;
+  color: var(--text-primary);
+}
