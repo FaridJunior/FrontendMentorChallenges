@@ -8,7 +8,7 @@ header {
   position: fixed;
   width: 100vw;
   display: grid;
-  grid-template-areas: ".   logo .   .   .    menu-switch . ";
+  grid-template-areas: ".   logo .   .   .  . . . menu-switch . ";
   align-items: center;
 
   @media (min-width: 800px) {
@@ -51,20 +51,18 @@ header {
 .logo {
   grid-area: logo;
   width: 40px;
-  margin: 0.5rem 0px;
+  margin: 2.5rem 0px;
   border-radius: 4px;
 }
 
-.menu-switch {
-}
 .toggle-btn-label {
   grid-area: menu-switch;
   justify-self: end;
-  width: 40px;
   span {
     cursor: pointer;
   }
 }
+
 .toggle-btn {
   display: none;
 }
@@ -76,6 +74,7 @@ header {
     transition: opacity 200ms ease-in-out 200ms; // it used while open
   }
 }
+
 .toggle-btn:checked ~ .toggle-btn-label {
   .close-icon {
     display: block;
@@ -89,35 +88,67 @@ header {
 }
 
 nav {
-  font-family: "Roboto Mono", monospace;
   top: 100%;
   width: 100vw;
-  background: var(--BG);
+  margin: 0 auto;
+
   position: absolute;
   transition: transform 400ms ease-in-out;
   transform-origin: top;
   transform: scaleY(0);
 }
 
-nav ul {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
+.nav__links {
+  border-radius: 4px;
+  box-shadow: 0 6.6px 5.3px rgba(0, 0, 0, 0.039), 0 13.9px 17.9px rgba(0, 0, 0, 0.062),
+    0 42px 80px rgba(0, 0, 0, 0.11);
+  background: #fff;
+
   font-weight: 600;
+  color: var(--very-dark-blue);
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-nav li {
-  margin: 0;
-  list-style: none;
+
+  width: 90vw;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+
+  display: flex;
+  flex-direction: column;
 }
 
-nav ul a {
+.nav__link {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+.nav__link--line-under {
+  position: relative;
+  padding-bottom: 1.2rem;
+}
+.nav__link--line-under + .nav__link {
+  padding-top: 1.2rem;
+}
+
+.nav__link--line-under::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0.4;
+  background: var(--grayish-blue);
+}
+
+.nav__link--mutted {
+  color: var(--grayish-blue);
+  // border-top: 1px solid var(--light-grayish-blue);
+  // border-top: 1px solid var(--grayish-blue);
+}
+
+.nav__link a {
   opacity: 0;
   transition: opacity 200ms ease-in-out; // it is used while close
   text-decoration: none;
-  color: var(--text-primary);
+  color: inherit;
 }
