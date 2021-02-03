@@ -1,20 +1,19 @@
 header {
-  --BG: #f57f17;
-  --text-primary: #fff;
-
   background: transparent;
-  top: 0;
   z-index: 9999;
   position: fixed;
   width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
   grid-template-areas: ".   logo .   .   .  . . . menu-switch . ";
   align-items: center;
-
+  //  this header is manyok
   @media (min-width: 800px) {
-    grid-template-areas: "logo nav nav nav   menu-switch";
+    grid-template-areas: ". . logo nav nav nav nav  nav nav nav nav nav nav nav nav menu-switch . .";
     .logo {
       justify-self: center;
+      margin: 3.2rem 0;
     }
     .toggle-btn-label {
       display: none;
@@ -26,23 +25,34 @@ header {
       justify-content: flex-end;
       height: 100%;
     }
-    nav ul {
+    .nav__links {
+      all: unset;
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      align-items: stretch;
+      align-items: center;
       padding: 0;
       height: 100%;
     }
-    nav ul li {
-      display: block;
+    .nav__link {
+      all: unset;
+      color: var(--very-dark-blue);
+      font-size: 1rem;
+      // letter-spacing: 1px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .nav__link:last-child {
+      margin-left: 3vmax;
+    }
+    .nav__link--line-under + .nav__link {
+      padding-top: 0;
+    }
+    .nav__link--line-under::after {
+      display: none;
+    }
+    .nav__link a {
       padding: 1.3rem;
-      min-height: 100%;
-    }
-    nav ul li:hover {
-      background: #ff6f00;
-    }
-    nav ul a {
       opacity: 1;
     }
   }
@@ -51,7 +61,7 @@ header {
 .logo {
   grid-area: logo;
   width: 40px;
-  margin: 2.5rem 0px;
+  margin: 2.4rem 0px;
   border-radius: 4px;
 }
 
@@ -121,6 +131,9 @@ nav {
   text-align: center;
   padding: 1rem 0rem;
 }
+.nav__link:hover {
+  text-decoration: underline;
+}
 .nav__link--line-under {
   position: relative;
   padding-bottom: 1.2rem;
@@ -140,10 +153,8 @@ nav {
   background: var(--grayish-blue);
 }
 
-.nav__link--mutted {
+.nav__link.nav__link--mutted {
   color: var(--grayish-blue);
-  // border-top: 1px solid var(--light-grayish-blue);
-  // border-top: 1px solid var(--grayish-blue);
 }
 
 .nav__link a {

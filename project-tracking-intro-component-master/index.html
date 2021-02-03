@@ -20,69 +20,75 @@
     <title>Frontend Mentor | Project tracking intro component</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-          <g fill="#323334" fill-rule="evenodd">
-            <path
-              d="M0 32V.241h23.041zM31.15 32V.241h-4.411L17.48 13.158zM3.645 32l11.854-15.879L27.353 32z"
-            />
-          </g>
-        </svg>
+    <div class="container">
+      <div class="design">
+        <img src="./design/desktop-design.jpg" alt="" />
       </div>
-      <input type="checkbox" name="toggle-btn" id="toggle-btn" class="toggle-btn" />
-      <label for="toggle-btn" class="toggle-btn-label">
-        <span class="open-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16">
-            <g fill="#242942" fill-rule="evenodd">
-              <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+      <header>
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+            <g fill="#323334" fill-rule="evenodd">
+              <path
+                d="M0 32V.241h23.041zM31.15 32V.241h-4.411L17.48 13.158zM3.645 32l11.854-15.879L27.353 32z"
+              />
             </g>
           </svg>
-        </span>
-        <spa class="close-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-            <path
-              fill="#242942"
-              fill-rule="evenodd"
-              d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
-            />
-          </svg>
-        </spa>
-      </label>
-      <nav>
-        <ul class="nav__links">
-          <li class="nav__link"><a href="">Product</a></li>
-          <li class="nav__link"><a href="">Features</a></li>
-          <li class="nav__link nav__link--line-under"><a href="">Pricing</a></li>
-          <li class="nav__link nav__link--mutted"><a href="">Login</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="bg_shape"></div>
-      <div class="hero__img">
-        <img src="./images/illustration-devices.svg" alt="devices" />
-      </div>
-      <div class="hero__content">
-        <div class="hero__text">
-          <p class=""><span class="badge">New</span> Monograph Dashboard</p>
-          <h1 class="hero__title">Powerful insights into your team</h1>
-          <p class="hero__subtitle">Project planning and time tracking for agile teams</p>
         </div>
-        <div class="hero__actions">
-          <button class="btn">Schedule a demo</button>
-          <a href="#">to see a preview</a>
-        </div>
-      </div>
-    </section>
+        <input type="checkbox" name="toggle-btn" id="toggle-btn" class="toggle-btn" />
+        <label for="toggle-btn" class="toggle-btn-label">
+          <span class="open-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16">
+              <g fill="#242942" fill-rule="evenodd">
+                <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+              </g>
+            </svg>
+          </span>
+          <spa class="close-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <path
+                fill="#242942"
+                fill-rule="evenodd"
+                d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+              />
+            </svg>
+          </spa>
+        </label>
+        <nav>
+          <ul class="nav__links">
+            <li class="nav__link"><a href="">Product</a></li>
+            <li class="nav__link"><a href="">Features</a></li>
+            <li class="nav__link nav__link--line-under"><a href="">Pricing</a></li>
+            <li class="nav__link nav__link--mutted"><a href="">Login</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="mohamedfarid.ninja">Mohamed Farid</a>.
-      </p>
-    </footer>
+      <section class="hero">
+        <div class="bg_shape"></div>
+        <div class="hero__img">
+          <img src="./images/illustration-devices.svg" alt="devices" />
+        </div>
+        <div class="hero__content">
+          <div class="hero__text">
+            <p class=""><span class="badge">New</span> Monograph Dashboard</p>
+            <h1 class="hero__title">Powerful insights into your team</h1>
+            <p class="hero__subtitle">Project planning and time tracking for agile teams</p>
+          </div>
+          <div class="hero__actions">
+            <button class="btn">Schedule a demo</button>
+            <a href="#">to see a preview</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreference"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://mohamedfarid.ninja">Mohamed Farid</a>.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
