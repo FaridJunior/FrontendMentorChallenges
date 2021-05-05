@@ -48,25 +48,6 @@ h3 {
   top: -5000px;
 }
 
-.box {
-  -webkit-transform: translateX(400%);
-          transform: translateX(400%);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-.box:nth-of-type(even) {
-  -webkit-transform: translateX(-400%);
-          transform: translateX(-400%);
-}
-
-.box.show {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
 header {
   color: var(--white);
   height: 0vh;
